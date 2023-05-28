@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ChinaImagePage extends StatefulWidget {
   @override
@@ -40,9 +41,12 @@ class _ChickenImagePageState extends State<ChinaImagePage> {
                   zoom: 15,
                 ),
                 mapType: MapType.normal,
-                myLocationEnabled: true, // 사용자의 위치 표시
+                myLocationEnabled: true,
                 onMapCreated: (controller) {
                   _onMapCreated(controller);
+                },
+                onTap: (LatLng position) {
+                  _launchGoogleMaps(position.latitude, position.longitude);
                 },
               ),
             ),
@@ -86,8 +90,29 @@ class _ChickenImagePageState extends State<ChinaImagePage> {
     setState(() {
       _initialPosition = LatLng(position.latitude, position.longitude);
     });
+
+    if (_mapController != null) {
+      _mapController.animateCamera(
+        CameraUpdate.newCameraPosition(
+          CameraPosition(
+            target: _initialPosition!,
+            zoom: 15,
+          ),
+        ),
+      );
+    }
+  }
+  void _launchGoogleMaps(double latitude, double longitude) async {
+    final url = 'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      print('Could not launch $url');
+    }
   }
 }
+
+
 
 void main() {
   runApp(MaterialApp(

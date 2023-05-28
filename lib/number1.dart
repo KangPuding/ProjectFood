@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:foodproject/chicken.dart';
+import 'package:foodproject/china.dart';
 import 'dart:math';
 import 'dart:async';
+
+import 'package:foodproject/coffee.dart';
+import 'package:foodproject/fastfood.dart';
+import 'package:foodproject/form.dart';
+import 'package:foodproject/hansik.dart';
+import 'package:foodproject/japan.dart';
+import 'package:foodproject/meat.dart';
+import 'package:foodproject/salad.dart';
+import 'package:foodproject/snackbar.dart';
+import 'package:foodproject/soup.dart';
 
 class Number1Page extends StatelessWidget {
   @override
@@ -11,6 +23,19 @@ class Number1Page extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: RandomImagePage(),
+      routes: {
+        '/chicken': (context) => ChickenImagePage(),
+        '/china': (context) => ChinaImagePage(),
+        '/coffee': (context) => CoffeeImagePage(),
+        '/fastfood': (context) => FastfoodImagePage(),
+        '/form': (context) => FormImagePage(),
+        '/japan': (context) => JapanImagePage(),
+        '/hansik': (context) => HansikImagePage(),
+        '/meat': (context) => MeatImagePage(),
+        '/salad': (context) => SaladImagePage(),
+        '/snackbar': (context) => SnackbarImagePage(),
+        '/soup': (context) => SoupImagePage(),
+      },
     );
   }
 }
@@ -95,10 +120,15 @@ class _RandomImagePageState extends State<RandomImagePage> {
             ),
             SizedBox(height: 20),
             if (selectedImage.isNotEmpty) ...[
-              Image.asset(
-                selectedImage,
-                width: 200,
-                height: 200,
+              GestureDetector(
+                onTap: () {
+                  navigateToImagePage(context, selectedImage);
+                },
+                child: Image.asset(
+                  selectedImage,
+                  width: 200,
+                  height: 200,
+                ),
               ),
               SizedBox(height: 20),
               Text(
@@ -138,6 +168,48 @@ class _RandomImagePageState extends State<RandomImagePage> {
         return '찌개';
       default:
         return '메뉴 설명이 없습니다.';
+    }
+  }
+
+  void navigateToImagePage(BuildContext context, String selectedImage) {
+    String routeName = '';
+    switch (selectedImage) {
+      case 'assets/chicken.png':
+        routeName = '/chicken';
+        break;
+      case 'assets/china.png':
+        routeName = '/china';
+        break;
+      case 'assets/coffee.png':
+        routeName = '/coffee';
+        break;
+      case 'assets/fastfood.png':
+        routeName = '/fastfood';
+        break;
+      case 'assets/form.png':
+        routeName = '/form';
+        break;
+      case 'assets/japan.png':
+        routeName = '/japan';
+        break;
+      case 'assets/korea.png':
+        routeName = '/hansik';
+        break;
+      case 'assets/meat.png':
+        routeName = '/meat';
+        break;
+      case 'assets/salad.png':
+        routeName = '/salad';
+        break;
+      case 'assets/snackbar.png':
+        routeName = '/snackbar';
+        break;
+      case 'assets/soup.png':
+        routeName = '/soup';
+        break;
+    }
+    if (routeName.isNotEmpty) {
+      Navigator.pushNamed(context, routeName);
     }
   }
 }
