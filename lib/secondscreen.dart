@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodproject/map.dart';
 import 'chicken.dart';
 import 'china.dart';
 import 'coffee.dart';
@@ -11,8 +12,16 @@ import 'salad.dart';
 import 'snackbar.dart';
 import 'soup.dart';
 import 'hansik.dart';
+import 'random2.dart';
 
 class SecondScreen extends StatelessWidget {
+  void navigateToMap(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MapPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +75,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HansikImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              HansikImagePage()),
                         );
                       },
                       child: Column(
@@ -98,7 +108,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ChinaImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              ChinaImagePage()),
                         );
                       },
                       child: Column(
@@ -130,7 +141,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => FormImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              FormImagePage()),
                         );
                       },
                       child: Column(
@@ -162,7 +174,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MeatImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              MeatImagePage()),
                         );
                       },
                       child: Column(
@@ -194,7 +207,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => JapanImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              JapanImagePage()),
                         );
                       },
                       child: Column(
@@ -226,7 +240,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SoupImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              SoupImagePage()),
                         );
                       },
                       child: Column(
@@ -258,7 +273,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CoffeeImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              CoffeeImagePage()),
                         );
                       },
                       child: Column(
@@ -290,7 +306,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => FastfoodImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              FastfoodImagePage()),
                         );
                       },
                       child: Column(
@@ -322,7 +339,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SnackbarImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              SnackbarImagePage()),
                         );
                       },
                       child: Column(
@@ -354,7 +372,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ChickenImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              ChickenImagePage()),
                         );
                       },
                       child: Column(
@@ -386,7 +405,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SaladImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              SaladImagePage()),
                         );
                       },
                       child: Column(
@@ -418,7 +438,8 @@ class SecondScreen extends StatelessWidget {
                         // '랜덤' 컨테이너를 눌렀을 때 새로운 창으로 이동
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => RandomImagePage()),
+                          MaterialPageRoute(builder: (context) =>
+                              RandomImagePage()),
                         );
                       },
                       child: Column(
@@ -459,6 +480,21 @@ class SecondScreen extends StatelessWidget {
                       // Button 1 tapped
                     },
                     child: Image.asset('assets/like.png'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      navigateToMap(context);
+                    },
+                    child: Image.asset('assets/map.png'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Random2()),
+                      );
+                    },
+                    child: Image.asset('assets/random2.png'),
                   ),
                   InkWell(
                     onTap: () {

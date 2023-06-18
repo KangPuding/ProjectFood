@@ -27,8 +27,8 @@ class RandomImagePage extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: MediaQuery.of(context).size.width - 32,
-                  height: 150,
+                  width: 383,
+                  height: 167,
                   color: Color(0xffd9d9d9),
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
@@ -73,8 +73,8 @@ class RandomImagePage extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: MediaQuery.of(context).size.width - 32,
-                  height: 150,
+                  width: 383,
+                  height: 167,
                   color: Color(0xffd9d9d9),
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
@@ -119,8 +119,8 @@ class RandomImagePage extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: MediaQuery.of(context).size.width - 32,
-                  height: 150,
+                  width: 383,
+                  height: 167,
                   color: Color(0xffd9d9d9),
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(

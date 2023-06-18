@@ -30,10 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_maps_flutter: ^2.2.0
+  google_maps_flutter: ^2.1.1
   geolocator: ^8.0.1
-  url_launcher: ^6.0.0
-  shared_preferences: ^2.0.12
+  location: ^4.3.1
+  http: ^0.13.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -57,30 +57,98 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-      - assets/apple.png
-      - assets/START!.png
-      - assets/splash.png
-      - assets/cook.jpg
-      - assets/korea.png
-      - assets/chicken.png
-      - assets/china.png
-      - assets/coffee.png
-      - assets/fastfood.png
-      - assets/japan.png
-      - assets/meat.png
-      - assets/random.png
-      - assets/salad.png
-      - assets/snackbar.png
-      - assets/soup.png
-      - assets/form.png
-      - assets/hansik.png
-      - assets/back.png
-      - assets/like.png
-      - assets/Refresh.png
-      - assets/number1.png
-      - assets/love.png
-      - assets/scissors.png
-
+    - assets/apple.png
+    - assets/START!.png
+    - assets/splash.png
+    - assets/cook.jpg
+    - assets/korea.png
+    - assets/chicken.png
+    - assets/chicken1.png
+    - assets/chicken2.png
+    - assets/chicken3.png
+    - assets/chicken4.png
+    - assets/chicken5.png
+    - assets/chicken6.png
+    - assets/china.png
+    - assets/china1.png
+    - assets/china2.png
+    - assets/china3.png
+    - assets/china4.png
+    - assets/china5.png
+    - assets/china6.png
+    - assets/coffee.png
+    - assets/coffee1.png
+    - assets/coffee2.png
+    - assets/coffee3.png
+    - assets/coffee4.png
+    - assets/coffee5.png
+    - assets/coffee6.png
+    - assets/fastfood.png
+    - assets/fastfood1.png
+    - assets/fastfood2.png
+    - assets/fastfood3.png
+    - assets/fastfood4.png
+    - assets/fastfood5.png
+    - assets/fastfood6.png
+    - assets/japan.png
+    - assets/japan1.png
+    - assets/japan2.png
+    - assets/japan3.png
+    - assets/japan4.png
+    - assets/japan5.png
+    - assets/japan6.png
+    - assets/meat.png
+    - assets/meat1.png
+    - assets/meat2.png
+    - assets/meat3.png
+    - assets/meat4.png
+    - assets/meat5.png
+    - assets/meat6.png
+    - assets/random.png
+    - assets/salad.png
+    - assets/salad1.png
+    - assets/salad2.png
+    - assets/salad3.png
+    - assets/salad4.png
+    - assets/salad5.png
+    - assets/salad6.png
+    - assets/snackbar.png
+    - assets/snackbar1.png
+    - assets/snackbar2.png
+    - assets/snackbar3.png
+    - assets/snackbar4.png
+    - assets/snackbar5.png
+    - assets/snackbar6.png
+    - assets/soup.png
+    - assets/soup1.png
+    - assets/soup2.png
+    - assets/soup3.png
+    - assets/soup4.png
+    - assets/soup5.png
+    - assets/soup6.png
+    - assets/form.png
+    - assets/form1.png
+    - assets/form2.png
+    - assets/form3.png
+    - assets/form4.png
+    - assets/form5.png
+    - assets/form6.png
+    - assets/hansik.png
+    - assets/hansik1.png
+    - assets/hansik3.png
+    - assets/hansik4.png
+    - assets/hansik5.png
+    - assets/hansik6.png
+    - assets/back.png
+    - assets/like.png
+    - assets/Refresh.png
+    - assets/number1.png
+    - assets/love.png
+    - assets/scissors.png
+    - assets/random2.png
+    - assets/hate.png
+    - assets/map.png
+    - assets/kakao.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
